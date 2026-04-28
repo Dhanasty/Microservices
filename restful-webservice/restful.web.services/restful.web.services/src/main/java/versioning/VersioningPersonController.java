@@ -6,9 +6,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VersioningPersonController {
 	
-	@GetMapping("/v1/person")
+//	@GetMapping("/v1/person")
+//	public PersonV1 getFirstVersionOfPerson() {
+//		return new PersonV1("Bob Charles");
+//	}
+	
+	@GetMapping(path ="/persons" ,version="2.0.0")
 	public PersonV1 getFirstVersionOfPerson() {
-		return new PersonV1("Bob Charles");
+		return new PersonV1("Three lions");
+	}
+	
+	@GetMapping(path ="/persons" ,version="1.0.0")
+	public PersonV1 getFirstVersionOfPerson2() {
+		return new PersonV1("Three Tiger");
 	}
 
 }

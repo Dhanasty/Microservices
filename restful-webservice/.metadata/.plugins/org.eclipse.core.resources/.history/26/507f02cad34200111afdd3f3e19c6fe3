@@ -1,0 +1,2 @@
+spring.messages.basename=messages
+spring.mvc.apiversion.header=X-API-VERSION
